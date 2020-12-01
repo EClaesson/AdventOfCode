@@ -1,16 +1,17 @@
+import itertools
+import functools
+
+
+def get_mult(input_lines, numbers):
+  return [functools.reduce(lambda a, b: a * b, x) for x in itertools.combinations(input_lines, numbers) if sum(x) == 2020][0]
+
+
 def run_part_a(input_lines):
-  for x in input_lines:
-    for y in input_lines:
-      if x + y == 2020:
-        return x * y
+  return get_mult(input_lines, 2)
 
 
 def run_part_b(input_lines):
-  for x in input_lines:
-    for y in input_lines:
-      for z in input_lines:
-        if x + y + z == 2020:
-          return x * y * z
+  return get_mult(input_lines, 3)
 
 
 if __name__ == '__main__':
