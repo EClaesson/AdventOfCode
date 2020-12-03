@@ -1,24 +1,8 @@
 import functools
 
 
-def get_at(input_line, index):
-  return input_line[index % len(input_line)]
-
-
-def get_tree_count(lines, x_delta, y_delta):
-  tree_count = 0
-  x = 0
-  y = y_delta
-
-  while y < len(lines):
-    x += x_delta
-
-    if get_at(lines[y], x) == '#':
-      tree_count += 1
-
-    y += y_delta
-
-  return tree_count
+def get_tree_count(input_lines, x_delta, y_delta):
+  return [input_lines[y][x_delta * (y // y_delta) % len(input_lines[y])] for y in range(y_delta, (len(input_lines)), y_delta)].count('#')
 
 
 def run_part_a(input_lines):
