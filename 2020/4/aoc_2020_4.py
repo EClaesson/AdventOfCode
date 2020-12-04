@@ -25,13 +25,7 @@ def validate_number(string, digits, end, min, max):
 
 
 def run_part_a(input_lines):
-  valid = 0
-
-  for passport in input_lines:
-    if len(passport.keys()) == 8 or len(passport.keys()) == 7 and 'cid' not in passport.keys():
-      valid += 1
-
-  return valid
+  return [len(passport.keys()) == 8 or len(passport.keys()) == 7 and 'cid' not in passport.keys() for passport in input_lines].count(True)
 
 
 def run_part_b(input_lines):
