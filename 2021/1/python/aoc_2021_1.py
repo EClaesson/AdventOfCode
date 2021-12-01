@@ -8,6 +8,6 @@ def run_part_b(values):
 
 
 if __name__ == '__main__':
-    with open('input') as input_file:
+    with open('../input') as input_file:
         input_values = [int(line) for line in input_file.readlines() if line]
         print(f'Part A: {run_part_a(input_values)}\nPart B: {run_part_b(input_values)}')
