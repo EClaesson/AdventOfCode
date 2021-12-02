@@ -7,8 +7,7 @@ defmodule AOC do
   end
 
   def run_part_a(values) do
-    values
-    |> Enum.chunk_every(2, 1, :discard)
+    Enum.chunk_every(values, 2, 1, :discard)
     |> Enum.count(fn [a, b] -> b > a end)
   end
 
