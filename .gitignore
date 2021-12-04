@@ -1,4 +1,4 @@
-# Generated with mkignore - https://github.com/EClaesson/mkignore 
+# Generated with mkignore - https://github.com/EClaesson/mkignore
 
 ##### Python ##################################
 # Byte-compiled / optimized / DLL files
@@ -140,5 +140,7 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-
-
+# Custom
+.idea/*
+_build/
+deps/
